@@ -1,0 +1,21 @@
+//# Functions
+//Write a program in C to find the sum of digits of a number using recursion
+#include<stdio.h>
+int sum_of_digits(int num)
+{
+	int rem=0,sum=0;
+	while(num>0)
+	{
+		rem = num%10;
+		sum = sum+rem;
+		num = num/10;
+	}
+	return sum;
+}
+int main()
+{
+	int num;
+	printf("Input number :");
+	scanf("%d",&num);
+	printf("Sum of digits: %d",sum_of_digits(num));
+}
